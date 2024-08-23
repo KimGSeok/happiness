@@ -2,6 +2,7 @@ import { defineGlobalStyles } from "@pandacss/dev";
 
 export const globalStyles = defineGlobalStyles({
   ':root': {
+    '--white100': '#FFFFFF',
     '--black100': '#212121',
     '--black200': '#3B3B3B',
     '--black300': '#545454',
@@ -42,5 +43,51 @@ export const globalStyles = defineGlobalStyles({
     '--green800': '#98E2A3',
     '--green900': '#B8EBBF',
     '--green1000': '#D7F4DC',
+  },
+  '*, *::before, *::after': {
+    boxSizing: 'border-box',
+    margin: 0,
+    padding: 0,
+  },
+  'html, body': {
+    fontSize: '14px',
+    color: 'var(--white100)',
+
+    '2xl':{
+    },
+    xl: {
+    },
+    lg: {
+      fontSize: '16px'
+    },
+    md: {
+      fontSize: '1rem'
+    },
+    sm: {
+    },
+  },
+  html: {
+    width: '100vw',
+    height: '100vh',
+    
+    '2xl': {
+      padding: '0 300px',
+    },
+    xl: {
+      padding: '0 200px',
+    },
+    lg: {
+      padding: '0 160px',
+    },
+    md: {
+      padding: '0 96px',
+    },
+    sm: {
+      padding: '0 24px',
+    },
+  },
+  body: {
+    background: 'url(/default_background.svg) no-repeat center center',
+    backgroundSize: 'cover',
   }
-})
+})  
