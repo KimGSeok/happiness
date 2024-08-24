@@ -25,19 +25,19 @@
 ## 📂 Folder Architecture
 
 ├── app
-  [not-found]
-  [introduce]
-  [history]
-  [portfolio]
+│   ├── [not-found]
+│   ├── [introduce]
+│   ├── [history]
+│   ├── [portfolio]
 ├── public
-  logos
+│   ├── logos
 ├── src
-  apis
-  assets
-  components
-  features
-  styles
-  utils
-  widgets
-  hooks
-  providers
+│   ├── apis
+│   ├── assets
+│   ├── components
+│   ├── features
+│   ├── styles
+│   ├── utils
+│   ├── widgets
+│   ├── hooks
+│   ├── providers
