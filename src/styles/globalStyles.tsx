@@ -54,8 +54,10 @@ export const globalStyles = defineGlobalStyles({
     color: 'var(--white100)',
 
     '2xl':{
+
     },
     xl: {
+
     },
     lg: {
       fontSize: '16px'
@@ -64,6 +66,7 @@ export const globalStyles = defineGlobalStyles({
       fontSize: '1rem'
     },
     sm: {
+      
     },
   },
   html: {
