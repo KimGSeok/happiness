@@ -24,7 +24,7 @@
 
 ## 📂 Folder Architecture
 ```
-├── app<br />
+├── app
 │   ├── [not-found]
 │   ├── [introduce]
 │   ├── [history]
