@@ -24,7 +24,7 @@
 
 ## 📂 Folder Architecture
 
-├── app
+├── app <br />
 │   ├── [not-found]
 │   ├── [introduce]
 │   ├── [history]
