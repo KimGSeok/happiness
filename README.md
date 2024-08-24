@@ -23,7 +23,7 @@
 </p>
 
 ## 📂 Folder Architecture
-
+```
 ├── app<br />
 │   ├── [not-found]
 │   ├── [introduce]
@@ -41,3 +41,4 @@
 │   ├── widgets
 │   ├── hooks
 │   ├── providers
+```
