@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/badge/zustand-000000?style=flat&logo=zustand&logoColor=white" alt="zustand"/>
   <img src="https://img.shields.io/badge/PandaCSS-fde047?style=flat&logo=zustand&logoColor=white" alt="PandaCSS"/>
 </p>
+<br />
 
 ## 📰 Description
 <p>
@@ -21,14 +22,23 @@
     또한, 이력서에서 기재할 수 없었던, 사소한 프로젝트나 각 프로젝트에서 맡았던 역할과 수행 내역에 대해서 보다 상세하게 기술하는 프로젝트입니다.
   </p>
 </p>
+<br />
 
 ## 📂 Folder Architecture
 ```
 ├── app
 │   ├── [not-found]
+│   │   ├── page.tsx
+│   │   ├── layout.tsx
 │   ├── [introduce]
+│   │   ├── [slug].tsx
+│   │   ├── page.tsx
 │   ├── [history]
+│   │   ├── [slug].tsx
+│   │   ├── page.tsx
 │   ├── [portfolio]
+│   │   ├── [slug].tsx
+│   │   ├── page.tsx
 ├── public
 │   ├── logos
 ├── src
