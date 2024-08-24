@@ -21,3 +21,23 @@
     또한, 이력서에서 기재할 수 없었던, 사소한 프로젝트나 각 프로젝트에서 맡았던 역할과 수행 내역에 대해서 보다 상세하게 기술하는 프로젝트입니다.
   </p>
 </p>
+
+## 📂 Folder Architecture
+
+app
+  [not-found]
+  [introduce]
+  [history]
+  [portfolio]
+public
+  logos
+src
+  apis
+  assets
+  components
+  features
+  styles
+  utils
+  widgets
+  hooks
+  providers
