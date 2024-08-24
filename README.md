@@ -24,14 +24,14 @@
 
 ## 📂 Folder Architecture
 
-app
+├── app
   [not-found]
   [introduce]
   [history]
   [portfolio]
-public
+├── public
   logos
-src
+├── src
   apis
   assets
   components
