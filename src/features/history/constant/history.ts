@@ -1,0 +1,1 @@
+export const START_HISTORY_YEAR = 2019;
