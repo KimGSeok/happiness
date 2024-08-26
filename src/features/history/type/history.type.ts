@@ -1,8 +1,8 @@
 export type THistory = {
-  startMonth: number;
-  endMonth?: number;
+  startDate: string;
+  endDate?: string;
   title: string;
-  content: string;
+  contents: string[];
   link: string;
 }
 

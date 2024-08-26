@@ -48,25 +48,30 @@ export const globalStyles = defineGlobalStyles({
     boxSizing: 'border-box',
     margin: 0,
     padding: 0,
+
+    '::-webkit-scrollbar': {
+      scrollBehavior: 'smooth',
+      display: 'none',
+    },
   },
   'html, body': {
     fontSize: '14px',
     color: 'var(--white100)',
 
     '2xl':{
-
+      fontSize: '16px',
     },
     xl: {
-
+      fontSize: '16px',
     },
     lg: {
-      fontSize: '16px'
+      fontSize: '14px'
     },
     md: {
-      fontSize: '1rem'
+      fontSize: '14px'
     },
     sm: {
-      
+      fontSize: '12px',
     },
   },
   html: {
