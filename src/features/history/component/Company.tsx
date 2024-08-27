@@ -34,18 +34,19 @@ const Container = styled('div', {
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
-    width: '27.5%',
+    width: '100%',
     paddingRight: '1vw',
+    margin: '0 0 20% 0',
 
     _after: {
       content: '""',
       position: 'absolute',
-      left: 'calc(100% - 0.5vw)',
+      left: 'calc(100% - 1vw)',
       width: '0.725vw',
       height: '0.725vw',
       borderRadius: '50%',
       boxShadow: 'rgb(255, 255, 255) 0px 0px 0px 2.5px',
-      zIndex: 2,
+      zIndex: 99,
     }
   }
 });

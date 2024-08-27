@@ -5,6 +5,7 @@ import { useState } from "react";
 import { styled } from "styled-system/jsx";
 import Company from "../component/Company";
 import HistoryItem from "../component/HistoryItem";
+import { css } from "styled-system/css";
 
 const HistoryScreen = () => {
 
@@ -13,16 +14,17 @@ const HistoryScreen = () => {
   const [activeHistory, setActiveHistory] = useState<string>(histories[0].companyEng);
 
   const handleChangeActiveHistory = (companyEng: string) => setActiveHistory(companyEng);
+
+  const activeCompanyData = data.find(({ companyEng }) => companyEng === activeHistory);
   
   return (
-    <Container>
-      {data.map(({ company, companyEng, startYear, endYear, data: histories }) => {
-
-        const isActive = activeHistory === companyEng;
-
-        return (
-          <CompanyField key={companyEng}>
+    <Container className={css({ display: 'flex' })}>
+      <CompanyField>
+        {data.map(({ company, companyEng, startYear, endYear }) => {
+          const isActive = activeHistory === companyEng;
+          return (
             <Company
+              key={companyEng}
               isActive={isActive}
               company={company}
               companyEng={companyEng}
@@ -30,19 +32,22 @@ const HistoryScreen = () => {
               endYear={endYear}
               handleChangeActiveHistory={handleChangeActiveHistory}
             />
-            {isActive && (
-              <HistoryItemContainer>
-                {histories.map((props) =>
-                  <HistoryItem
-                    key={`${props.link}-${props.title}`}
-                    {...props}
-                  />
-                )}
-              </HistoryItemContainer>
-            )}
-          </CompanyField>
-        )
-      })}
+          )
+        })}
+      </CompanyField>
+      <ul
+        className={css({
+          height: 'calc(100vh - 96px - 6rem - 2.725vw)',
+          overflow: 'scroll',
+        })}
+      >
+        {activeCompanyData?.data.map((props) =>
+          <HistoryItem
+            key={`${props.link}-${props.title}`}
+            {...props}
+          />
+        )}
+      </ul>
     </Container>
   )
 }
@@ -58,18 +63,7 @@ const Container = styled('div', {
 
 const CompanyField = styled('div', {
   base: {
-    width: '100%',
-    height: '5vh',
-    margin: '0 0 4vw 0'
-  }
-})
-
-const HistoryItemContainer = styled('ul', {
-  base: {
-    position: 'absolute',
-    width: 'calc(72.5% - 1vw)',
-    top: '1vw',
-    left: '27.25%',
+    width: '27.5%',
     height: 'calc(100vh - 96px - 6rem - 2.725vw)',
     overflow: 'scroll',
 
@@ -77,8 +71,8 @@ const HistoryItemContainer = styled('ul', {
       content: '""',
       position: 'absolute',
       display: 'inline-block',
-      top: '0.725vw',
-      left: '-1px',
+      top: '1.725vw',
+      left: 'calc(27.25% - 0.5vw)',
       width: '3px',
       height: 'calc(100vh - 96px - 6rem - 2.725vw)',
       backgroundColor: 'var(--black300)',
