@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { capitalizeFirstString } from "src/utils/formatting";
 import { css } from "styled-system/css";
 import { flex } from "styled-system/patterns";
+import { usePathname } from "next/navigation";
 
 const routes = [
   {
@@ -23,6 +26,9 @@ const routes = [
 ]
 
 const Footer = () => {
+
+  const pathname = usePathname();
+
   return (
     <footer
       className={css({
@@ -41,7 +47,12 @@ const Footer = () => {
         {routes.map(({ label, path }) => {
           return (
             <Link key={path} href={path} passHref>
-              <li className={css({ margin: '0 3rem 0 0' })}>{capitalizeFirstString(label)}</li>
+              <li
+                className={css({
+                  margin: '0 3rem 0 0',
+                  color: pathname === path ? 'var(--white100)' : 'var(--black500)',
+                })}
+              >{capitalizeFirstString(label)}</li>
             </Link>
           )
         })}

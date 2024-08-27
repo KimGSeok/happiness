@@ -26,7 +26,22 @@ export default defineConfig({
         xl: '1280px',
         '2xl': '1536px'
       },
-      keyframes: { }
+      keyframes: {
+        unfold: {
+          '0%': {
+            transform: 'scaleY(0.1)',
+            clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)'
+          },
+          '50%': {
+            transform: 'scaleY(0.5)',
+            clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'
+          },
+          '100%': {
+            transform: 'scaleY(1)',
+            clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'
+          },
+        }
+      }
     }
   },
 
