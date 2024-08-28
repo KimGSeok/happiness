@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header
       className={css({
-        height: 'calc(3rem + 48px)',
+        height: 'calc(6% + 48px)',
         padding: {
           base: '48px 0 0 0',
           '2xl': '48px 0 0 0',

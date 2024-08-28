@@ -1,9 +1,21 @@
-import { Fragment, PropsWithChildren } from "react";
+"use client";
+
+import { Fragment, PropsWithChildren, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { styled } from "styled-system/jsx";
 
 const AppLayout = ({ children }: PropsWithChildren) => {
+
+  const setScreenSize = () =>{
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }
+
+  useEffect(() => {
+    setScreenSize();
+  });
+
   return (
     <Fragment>
       <Header />
@@ -15,7 +27,8 @@ const AppLayout = ({ children }: PropsWithChildren) => {
 
 const Main = styled("main", {
   base: {
-    height: "calc(100vh - 96px - 6rem)",
+    position: "relative",
+    height: "calc(88% - 96px)",
   }
 });
 

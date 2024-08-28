@@ -32,7 +32,7 @@ const Footer = () => {
   return (
     <footer
       className={css({
-        height: 'calc(3rem + 48px)',
+        height: 'calc(6% + 48px)',
         padding: {
           base: '0 0 48px 0',
           '2xl': '0 0 48px 0',
@@ -45,12 +45,17 @@ const Footer = () => {
     >
       <ul className={flex({ alignItems: 'center' })}>
         {routes.map(({ label, path }) => {
+
+          const isActive = pathname === path;
+          
           return (
             <Link key={path} href={path} passHref>
               <li
                 className={css({
                   margin: '0 3rem 0 0',
-                  color: pathname === path ? 'var(--white100)' : 'var(--black500)',
+                  color: isActive ? 'var(--black200)' : 'var(--deactive-color)',
+                  fontWeight: isActive ? 600 : 400,
+                  transition: 'color 0.3s',
                 })}
               >{capitalizeFirstString(label)}</li>
             </Link>

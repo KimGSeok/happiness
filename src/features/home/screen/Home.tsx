@@ -1,19 +1,19 @@
 import { css } from "styled-system/css";
-import { styled } from "styled-system/jsx";
 
 const HomeScreen = () => {
   return (
     <div
       className={css({
         position: 'absolute',
+        width: '100%',
         top: '50%',
         transform: 'translateY(-50%)',
 
         '& div': {
           lineHeight: '1.5',
-          fontSize: '1rem',
+          fontSize: '1.725rem',
           fontWeight: 600,
-          letterSpacing: '2.5px',
+          letterSpacing: '2px',
 
           '2xl': {
             fontSize: '3rem'
@@ -35,9 +35,9 @@ const HomeScreen = () => {
           _after: {
             position: 'absolute',
             content: '""',
-            width: '98%',
+            width: '-webkit-fill-available',
             height: '4px',
-            backgroundColor: 'var(--white100)',
+            backgroundColor: 'var(--black200)',
             top: '50%',
             transform: 'translateY(-50%)',
             marginLeft: '2%',

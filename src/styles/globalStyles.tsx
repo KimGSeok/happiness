@@ -43,6 +43,7 @@ export const globalStyles = defineGlobalStyles({
     '--green800': '#98E2A3',
     '--green900': '#B8EBBF',
     '--green1000': '#D7F4DC',
+    '--deactive-color': '#BFBFBF',
   },
   '*, *::before, *::after': {
     boxSizing: 'border-box',
@@ -55,47 +56,25 @@ export const globalStyles = defineGlobalStyles({
     },
   },
   'html, body': {
-    fontSize: '14px',
-    color: 'var(--white100)',
-
-    '2xl':{
-      fontSize: '16px',
-    },
-    xl: {
-      fontSize: '16px',
-    },
-    lg: {
-      fontSize: '14px'
-    },
-    md: {
-      fontSize: '14px'
-    },
-    sm: {
-      fontSize: '12px',
-    },
+    fontSize: '16px',
+    color: 'var(--black200)',
   },
   html: {
     width: '100vw',
-    height: '100vh',
-    
-    '2xl': {
-      padding: '0 300px',
+    padding: '0 10vw',
+
+    '@media (max-width: 480px)': {
+      fontSize: '10px',
     },
-    xl: {
-      padding: '0 200px',
-    },
-    lg: {
-      padding: '0 160px',
-    },
-    md: {
-      padding: '0 96px',
-    },
-    sm: {
-      padding: '0 24px',
+
+    '@media (min-width: 768px)': {
+      fontSize: '14px',
     },
   },
   body: {
-    background: 'url(/default_background.svg) no-repeat center center',
+    position: 'relative',
+    height: 'calc(var(--vh, 1vh) * 100)',
+    background: 'url(/default_white_background.svg) no-repeat center center',
     backgroundSize: 'cover',
   }
 })  
