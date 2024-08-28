@@ -15,7 +15,7 @@ const Profile = ({ handleShowDescription }: Props) => {
   const handleGoToLink = (link: string) => router.push(link);
 
   return (
-    <div className={css({ width: '55%' })}>
+    <div className={css({ width: '100%' })}>
       <LabelFieldList>
         <li>성명</li>
         <li className={css({ fontWeight: 500 })}>{`김경석 (KimGyeongSeok)`}</li>
@@ -79,7 +79,7 @@ const LabelFieldList = styled('ul', {
 
       _first: {
         padding: '0 0 4px 0',
-        color: 'var(--white100)',
+        color: 'var(--black200)',
         fontWeight: 600,
         fontSize: '1.125rem',
       },

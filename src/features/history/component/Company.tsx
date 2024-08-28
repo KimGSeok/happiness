@@ -1,72 +1,57 @@
 import { css } from "styled-system/css";
-import { styled } from "styled-system/jsx";
+import { Flex, styled } from "styled-system/jsx";
 import { THistories } from "../type/history.type";
 
 type Props = {
   isActive: boolean;
-  handleChangeActiveHistory: (companyEng: string) => void;
-} & Pick<THistories, 'company' | 'companyEng' | 'startYear' | 'endYear'>;
+  handleChangeActiveHistory: () => void;
+} & Pick<THistories, 'company' | 'companyEng' | 'startYear' | 'endYear' | 'data'>;
 
-const Company = ({ isActive, company, companyEng, startYear, endYear, handleChangeActiveHistory }: Props) => {
+const Company = ({ isActive, handleChangeActiveHistory, company, companyEng, startYear, endYear, data }: Props) => {
   return (
-    <Container
-      className={css({
-        _after: {
-          backgroundColor: isActive ? 'var(--black200)' : 'var(--black500)',
-          boxShadow: isActive ? 'rgb(255, 255, 255) 0px 0px 0px 2.5px' : 'rgb(255, 255, 255) 0px 0px 0px 0px',
-        }
-      })}
-    >
-      <CompanyName
-        className={css({
-          color: isActive ? 'var(--white100)' : 'var(--black500)',
-        })}
-      >
-        <span className={css({ cursor:'pointer' })} onClick={() => handleChangeActiveHistory(companyEng)}>{company}</span>
-      </CompanyName>
-      <OfficePeriod>{startYear} - {endYear}</OfficePeriod>
-    </Container>
+    <>
+      <Flex alignItems="center">
+        <h3 className={css({ fontSize: '1.275rem', fontWeight: 600, color: 'var(--blue500)', cursor: 'pointer' })} onClick={handleChangeActiveHistory}>{company}</h3>
+        <Period>{`${startYear} - ${endYear}`}</Period>
+      </Flex>
+      {isActive && (
+        <>
+          {data.map(({ title, contents, startDate, endDate, link }) => (
+            <HistoryItem key={title}>
+              <h4 className={css({ fontSize: '1.215rem', fontWeight: 600, whiteSpace: 'break-spaces', wordBreak: 'break-word' })}>{title}</h4>
+              <div className={css({ fontSize: '1.025rem', color: 'var(--black800)', margin: '6px 0' })}>{`기간: ${startDate} - ${endDate}`}</div>
+              <ul>
+                {contents.map((content, index) => (
+                  <li
+                    key={index}
+                    className={css({ fontSize: '1.075rem', color: 'var(--black300)' })}
+                  >{content}</li>
+                ))}
+              </ul>
+            </HistoryItem>
+          ))}
+        </>
+      )}
+    </>
   )
 };
 
-const Container = styled('div', {
+const Period = styled('div', {
   base: {
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-    width: '100%',
-    paddingRight: '1vw',
-    margin: '0 0 20% 0',
+    fontSize: '14px',
+    color: 'var(--black500)',
+    marginLeft: '8px',
+  }
+})
 
-    _after: {
-      content: '""',
-      position: 'absolute',
-      left: 'calc(100% - 1vw)',
-      width: '0.725vw',
-      height: '0.725vw',
-      borderRadius: '50%',
-      boxShadow: 'rgb(255, 255, 255) 0px 0px 0px 2.5px',
-      zIndex: 99,
-    }
+const HistoryItem = styled('div', {
+  base: {
+    margin: '10px 0 16px 0',
+    padding: '16px',
+    backgroundColor: 'var(--white100)',
+    boxShadow: '2px 2px 12px 0px rgb(0 0 0 / 0.1)',
+    borderRadius: '8px',
   }
 });
-
-const CompanyName = styled('h2', {
-  base: {
-    width: '70%',
-    fontSize: '1vw',
-    fontWeight: 600,
-    transition: 'color 0.3s',
-  }
-})
-
-const OfficePeriod = styled('p', {
-  base: {
-    width: '30%',
-    fontSize: '0.725vw',
-    fontWeight: 600,
-    color: 'var(--black800)'
-  }
-})
 
 export default Company;

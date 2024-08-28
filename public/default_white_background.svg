@@ -1,0 +1,119 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2035_267)">
+<rect width="1920" height="1080" fill="white"/>
+<g filter="url(#filter0_d_2035_267)">
+<rect x="155" y="688.826" width="2135.95" height="663.964" transform="rotate(-15 155 688.826)" fill="#FAFAFA"/>
+</g>
+<svg width="1000" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 그라디언트 정의 -->
+    <linearGradient id="gradient">
+      <stop offset="5%" stop-color="#E6E6E6" />
+      <stop offset="20%" stop-color="#FFF" />
+      <stop offset="40%" stop-color="#E6E6E6" />
+      <stop offset="60%" stop-color="#E6E6E6" />
+      <stop offset="80%" stop-color="#FFF" />
+      <stop offset="95%" stop-color="#E6E6E6" />
+    </linearGradient>
+
+    <linearGradient id="animated-gradient">
+      <stop offset="5%" stop-color="#E6E6E6" />
+      <stop offset="20%" stop-color="#FFF" />
+      <stop offset="40%" stop-color="#E6E6E6" />
+      <stop offset="60%" stop-color="#E6E6E6" />
+      <stop offset="80%" stop-color="#FFF" />
+      <stop offset="95%" stop-color="#E6E6E6" />
+      <animate 
+        attributeName="x1" 
+        from="0%" 
+        to="100%" 
+        dur="3.5s" 
+        repeatCount="indefinite" 
+        keyTimes="0;1" 
+      />
+      <animate 
+        attributeName="x2" 
+        from="100%" 
+        to="0%" 
+        dur="3.5s" 
+        repeatCount="indefinite" 
+        keyTimes="0;1" 
+      />
+    </linearGradient>
+  </defs>
+
+  <!-- 요청된 선 그리기 -->
+  <line 
+    x1="-0.295993" 
+    y1="379.045" 
+    x2="738.704" 
+    y2="150.045" 
+    stroke="url(#animated-gradient)" 
+    stroke-width="2" 
+  />
+</svg>
+<svg width="1000" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 그라디언트 정의 -->
+    <linearGradient id="gradient">
+      <stop offset="5%" stop-color="#FFF" />
+      <stop offset="20%" stop-color="#E6E6E6" />
+      <stop offset="40%" stop-color="#FFF" />
+      <stop offset="60%" stop-color="#FFF" />
+      <stop offset="80%" stop-color="#E6E6E6" />
+      <stop offset="95%" stop-color="#FFF" />
+    </linearGradient>
+
+    <linearGradient id="animated-gradient">
+      <stop offset="5%" stop-color="#FFF" />
+      <stop offset="20%" stop-color="#E6E6E6" />
+      <stop offset="40%" stop-color="#FFF" />
+      <stop offset="60%" stop-color="#FFF" />
+      <stop offset="80%" stop-color="#E6E6E6" />
+      <stop offset="95%" stop-color="#FFF" />
+      <animate 
+        attributeName="x1" 
+        from="0%" 
+        to="100%" 
+        dur="5s" 
+        repeatCount="indefinite" 
+        keyTimes="0;1" 
+      />
+      <animate 
+        attributeName="x2" 
+        from="100%" 
+        to="0%" 
+        dur="5s" 
+        repeatCount="indefinite" 
+        keyTimes="0;1" 
+      />
+    </linearGradient>
+  </defs>
+
+  <!-- 선 그리기 -->
+  <line 
+    x1="402.643" 
+    y1="-29.766" 
+    x2="995.307" 
+    y2="467.538" 
+    stroke="url(#animated-gradient)" 
+    stroke-width="2" 
+  />
+</svg>
+</g>
+<defs>
+<filter id="filter0_d_2035_267" x="131" y="136" width="2285.02" height="1251.17" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="1" dy="32"/>
+<feGaussianBlur stdDeviation="12.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.9 0 0 0 0 0.9 0 0 0 0 0.9 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2035_267"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2035_267" result="shape"/>
+</filter>
+<clipPath id="clip0_2035_267">
+<rect width="1920" height="1080" fill="white"/>
+</clipPath>
+</defs>
+</svg>
