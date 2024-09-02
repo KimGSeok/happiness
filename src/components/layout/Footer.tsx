@@ -21,7 +21,7 @@ const routes = [
   },
   {
     label: "portfolio",
-    path: "/portfolio",
+    path: "https://drive.google.com/file/d/16bk3MRn7czWVVQaX7mwnZ5S3A3Lj3a4h/view?usp=drive_link",
   }
 ]
 
